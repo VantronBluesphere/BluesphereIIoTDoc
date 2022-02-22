@@ -1,4 +1,21 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Bluesphere IIoT'
 theme = "hugo-geekdoc"
+
+[params]
+
+geekdocMenuBundle = false
+
+
+defaultContentLanguage = "en"
+
+[languages.en]
+languageName = "English"
+contentDir = "content/en"
+weight = 10
+
+[languages.zh]
+languageName = "中文"
+contentDir = "content/zh"
+weight = 20
