@@ -35,12 +35,10 @@ jobs:
           script: |
             cd ~/BluesphereIIoTDoc
             # 由于BluesphereIIoTDoc项目不包含编译后的静态文件，
-            # 所以这里先将编译后的静态文件添加到git，然后执行stash clear
-            # 清除public文件夹下的内容，再重新拉取源文件，再执行编译和重启
-            # nginx
+            # 所以这里直接丢弃编译后的静态文件，然后再重新拉取源文件，
+            # 最后执行编译和重启nginx
             git add -A
-            git stash
+            git reset --hard
             git pull --rebase
-            git stash clear
             hugo
             docker restart nginx-iiotdoc
