@@ -107,7 +107,7 @@ resources:
 
 {{< toc >}}
 
-## Overview
+## Overview1
 
 The Tenant administrator is able to configure common settings for multiple devices using Device Profiles. Each Device has one and only profile at a single point in time.
 
