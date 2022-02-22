@@ -43,4 +43,4 @@ jobs:
             git pull --rebase
             git stash clear
             hugo
-            docker restart nginx-iiot
+            docker restart nginx-iiotdoc
