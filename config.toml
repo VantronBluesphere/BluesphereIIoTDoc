@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://iiot-doc.bluesphere.cloud/'
 languageCode = 'en-us'
 title = 'Bluesphere IIoT'
 theme = "hugo-geekdoc"
