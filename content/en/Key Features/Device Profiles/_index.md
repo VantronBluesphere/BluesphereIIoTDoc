@@ -102,7 +102,57 @@ resources:
   - name: Notifications-About-Alarms-1
     src: "Notifications-About-Alarms-1.png"
     title: 
-
+  - name: Thing-Model-Add-Attributes-1
+    src: "Thing-Model-Add-Attributes-1.png"
+    title: 
+  - name: Thing-Model-Add-Attributes-2
+    src: "Thing-Model-Add-Attributes-2.png"
+    title: 
+  - name: Thing-Model-Add-Telemetry-Data-1
+    src: "Thing-Model-Add-Telemetry-Data-1.png"
+    title: 
+  - name: Thing-Model-Add-Telemetry-Data-2
+    src: "Thing-Model-Add-Telemetry-Data-2.png"
+    title: 
+  - name: Thing-Model-Add-RPC-1
+    src: "Thing-Model-Add-RPC-1.png"
+    title: 
+  - name: Thing-Model-Add-RPC-2
+    src: "Thing-Model-Add-RPC-2.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-1
+    src: "Thing-Model-View-Thing-Model-Details-1.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-2
+    src: "Thing-Model-View-Thing-Model-Details-2.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-3
+    src: "Thing-Model-View-Thing-Model-Details-3.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-4
+    src: "Thing-Model-View-Thing-Model-Details-4.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-5
+    src: "Thing-Model-View-Thing-Model-Details-5.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-6
+    src: "Thing-Model-View-Thing-Model-Details-6.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-7
+    src: "Thing-Model-View-Thing-Model-Details-7.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-8
+    src: "Thing-Model-View-Thing-Model-Details-8.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-9
+    src: "Thing-Model-View-Thing-Model-Details-9.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-10
+    src: "Thing-Model-View-Thing-Model-Details-10.png"
+    title: 
+  - name: Thing-Model-View-Thing-Model-Details-11
+    src: "Thing-Model-View-Thing-Model-Details-11.png"
+    title: 
 ---
 
 {{< toc >}}
@@ -417,6 +467,124 @@ Assuming you have configured alarm rules you may also want to receive a notifica
 You may also use existing guides: [Send email on alarm](https://thingsboard.io/docs/user-guide/rule-engine-2-0/tutorials/send-email/) (Use part which explains ‘to email’ and ‘send email’ nodes) or [Telegram notifications](https://thingsboard.io/docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/). There is also an additional ‘Alarm Updated’ relation type that should be ignored in most cases to avoid duplicate notifications.
 
 {{< img name="Notifications-About-Alarms-1" size="large" lazy=false >}} 
+
+
+
+### Thing Model
+
+Thing Model is a common model to describe the virtual counterpart of physical objects in the Web of Things. It provides a unified way to describe the capabilities of an IoT device with its offered data model and functions.
+
+The Thing Model defines 3 kinds of Interaction Affordances, named Attributes, Telemetry and RPC:
+
+- **Attributes**
+
+  Include Client attributes and Shared attributes. An Interaction Affordance that exposes state of an IoT device. This state can then be retrieved (read) and optionally updated (write). Devices can also choose to make Attributes observable by pushing the new state after a change.
+
+- **Telemetry**
+
+  It describes the telemetry data to be uploaded by the device. You can use it in Dashboard Entity Filter.
+
+- **RPC**
+
+  An Interaction Affordance that allows to invoke a function of an IoT device, which manipulates state (e.g., toggling a lamp on or off) or triggers a process on the device (e.g., dim a lamp over time).
+
+This setting is available in the Device Profile wizard and in the Device Profile details. 
+
+#### Add Attributes of devices in Thing Model
+
+- Step1. Open the device profile and click "+" on the top of right.
+
+- Step2. Switch to the "Thing Model" tab and click "+" on the card "Attributes" to add new attributes.
+
+  {{< img name="Thing-Model-Add-Attributes-1" size="large" lazy=false >}} 
+
+- Step3. Name the attribute and choose the Scope and Data Type for it.
+
+  {{< img name="Thing-Model-Add-Attributes-2" size="large" lazy=false >}} 
+
+- Step4. You can click "+" to add multiple attributes.
+
+#### Add Telemetry data of devices in Thing Model
+
+- Step1. Open the device profile and click "+" on the top of right.
+
+- Step2. Switch to the "Thing Model" tab and click "+" on the card "Telemetry" to add new telemetry data.
+
+  {{< img name="Thing-Model-Add-Telemetry-Data-1" size="large" lazy=false >}} 
+
+- Step3. Name the telemetry and choose the Data Type for it.
+
+  {{< img name="Thing-Model-Add-Telemetry-Data-2" size="large" lazy=false >}} 
+
+- Step4. You can click "+" to add multiple telemetry data.
+
+#### Add RPC action of devices in Thing Model
+
+- Step1. Open the device profile and click "+" on the top of right.
+
+- Step2. Switch to the "Thing model" tab and click "+" on the card "RPC" to add new telemetry data.
+
+  {{< img name="Thing-Model-Add-RPC-1" size="large" lazy=false >}} 
+
+- Step3. Name the RPC method and add request and response parameters for it.
+
+  {{< img name="Thing-Model-Add-RPC-2" size="large" lazy=false >}} 
+
+- Step4. Click "Add" to add this device profile.
+
+#### View thing model details
+
+You can view thing model details in the Device Details.
+
+- Step1. Open the Device Details of one device and switch to the "Thing model" tab.
+
+  {{< img name="Thing-Model-View-Thing-Model-Details-1" size="large" lazy=false >}} 
+
+- Step2. Use MQTTX to upload attributes to platform.
+
+  {{< img name="Thing-Model-View-Thing-Model-Details-2" size="large" lazy=false >}} 
+
+- Step3. In the "Attributes" tab, we can see the latest attribute value.
+
+  {{< img name="Thing-Model-View-Thing-Model-Details-3" size="large" lazy=false >}} 
+
+- Step4. Use MQTTX to upload telemetry data to platform.
+
+  {{< img name="Thing-Model-View-Thing-Model-Details-4" size="large" lazy=false >}} 
+
+- Step5. In the "Telemetry" tab, we can see the latest telemetry data.
+
+  {{< img name="Thing-Model-View-Thing-Model-Details-5" size="large" lazy=false >}} 
+
+- Step6. Switch to "RPC" tab, click "+" and then you can send a RPC command to device.
+
+  {{< img name="Thing-Model-View-Thing-Model-Details-6" size="large" lazy=false >}} 
+
+  - Send a RPC command defined in Thing Model
+
+    {{< img name="Thing-Model-View-Thing-Model-Details-7" size="large" lazy=false >}} 
+
+    Use MQTTX to upload response data to platform.
+
+    {{< img name="Thing-Model-View-Thing-Model-Details-8" size="large" lazy=false >}} 
+
+    You can see the RPC log immediately.
+
+    {{< img name="Thing-Model-View-Thing-Model-Details-9" size="large" lazy=false >}} 
+
+  - Send a custom RPC command
+
+    {{< img name="Thing-Model-View-Thing-Model-Details-10" size="large" lazy=false >}} 
+
+    You can see the RPC log immediately.
+
+    {{< img name="Thing-Model-View-Thing-Model-Details-11" size="large" lazy=false >}} 
+
+
+
+
+
+
 
 
 
